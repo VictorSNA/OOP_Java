@@ -9,14 +9,26 @@
  * @author victorn
  */
 public class Exam {
-  public String consulta;
-  public String data;
-  public String descritivo;
+  private String consulta;
+  private String data;
+  private String descritivo;
+
+  public Exam() {
+    this.consulta = "";
+    this.data = "";
+    this.descritivo = "";
+  }
+
+  public Exam(String consulta, String data, String descritivo) {
+    this.consulta = consulta;
+    this.data = data;
+    this.descritivo = descritivo;
+  }
 
   public void mostrar(){
-    System.out.println("consulta"+consulta);
-    System.out.println("data"+data);
-    System.out.println("descritivo"+descritivo);
+    System.out.println("consulta"+getConsulta());
+    System.out.println("data"+getData());
+    System.out.println("descritivo"+getDescritivo());
   }
 
   public void solicitar(){
@@ -25,5 +37,47 @@ public class Exam {
 
   public void consultar(){
     //todo
+  }
+
+  /**
+   * @return the consulta
+   */
+  public String getConsulta() {
+    return consulta;
+  }
+
+  /**
+   * @param consulta the consulta to set
+   */
+  public void setConsulta(String consulta) {
+    this.consulta = consulta;
+  }
+
+  /**
+   * @return the data
+   */
+  public String getData() {
+    return data;
+  }
+
+  /**
+   * @param data the data to set
+   */
+  public void setData(String data) {
+    this.data = data;
+  }
+
+  /**
+   * @return the descritivo
+   */
+  public String getDescritivo() {
+    return descritivo;
+  }
+
+  /**
+   * @param descritivo the descritivo to set
+   */
+  public void setDescritivo(String descritivo) {
+    this.descritivo = descritivo;
   }
 }
